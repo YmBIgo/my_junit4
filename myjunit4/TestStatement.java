@@ -22,7 +22,11 @@ public class TestStatement extends Statement {
 	public void evaluate() throws Throwable {
 		for ( Method method : testMethods ) {
 			counter.addCount();
-			method.invoke(target);
+			try {
+				method.invoke(target);
+			} catch (Throwable e) {
+				counter.addFailure();
+			}
 		}
 	}
 }

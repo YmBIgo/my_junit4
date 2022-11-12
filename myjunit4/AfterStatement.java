@@ -27,7 +27,7 @@ public class AfterStatement extends Statement {
 		try {
 			next.evaluate();
 		} catch (Throwable e) {
-			counter.addFailure();
+			// counter.addFailure();
 		} finally {
 			for ( Method after : afters ) {
 				after.invoke(target);

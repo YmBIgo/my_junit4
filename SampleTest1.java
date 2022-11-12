@@ -26,4 +26,8 @@ public class SampleTest1 {
 	public void test2() {
 		Assertion.assertEquals("Should not be equal.", 1, hoge);
 	}
+	@Test
+	public void test3() {
+		Assertion.assertEquals("Should not be equal.", "test", "hoge");
+	}
 }
